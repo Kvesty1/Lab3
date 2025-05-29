@@ -1,0 +1,14 @@
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\bin\Debug\net8.0\Lab(#C)3.exe
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\bin\Debug\net8.0\Lab(#C)3.deps.json
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\bin\Debug\net8.0\Lab(#C)3.runtimeconfig.json
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\bin\Debug\net8.0\Lab(#C)3.dll
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\bin\Debug\net8.0\Lab(#C)3.pdb
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.AssemblyInfoInputs.cache
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.AssemblyInfo.cs
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.dll
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\refint\Lab(#C)3.dll
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.pdb
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\Lab(#C)3.genruntimeconfig.cache
+C:\Users\Andrey\source\repos\Lab(#C)3\Lab(#C)3\obj\Debug\net8.0\ref\Lab(#C)3.dll
