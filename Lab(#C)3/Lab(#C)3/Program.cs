@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace MatrixCalculator
 {
@@ -39,7 +40,7 @@ namespace MatrixCalculator
                 Console.Clear();
                 Console.WriteLine("--- Создание двух случайных квадратных матриц ---");
 
-                // Получаем и проверяем строки
+                // Указываем и проверяем строки
                 int rows;
                 while (true)
                 {
@@ -49,7 +50,7 @@ namespace MatrixCalculator
                     Console.WriteLine("Ошибка: количество строк должно быть положительным целым числом!");
                 }
 
-                // Получаем и проверяем столбцы
+                // Указываем и проверяем столбцы
                 int columns;
                 while (true)
                 {
@@ -99,19 +100,77 @@ namespace MatrixCalculator
                 Console.WriteLine("1. Показать обе матрицы");
                 Console.WriteLine("2. Сложить матрицы");
                 Console.WriteLine("3. Умножить матрицы");
+                Console.WriteLine("4. Сравнить матрицы");
+                Console.WriteLine("5. Найти определитель матриц");
+                Console.WriteLine("6. Найти обратную матрицу");
+                Console.WriteLine("7. Клонировать матрицу");
                 Console.WriteLine("0. Вернуться в главное меню");
                 Console.Write("Выберите пункт: ");
 
                 string input = Console.ReadLine();
 
-                switch (input)
+                try
                 {
-                    case "0":
-                        return;
-                    default:
-                        Console.WriteLine("Неверный ввод!");
-                        break;
+                    switch (input)
+                    {
+                        case "1":
+                            matrix1.Print("\n=== Матрица 1 ===");
+                            matrix2.Print("\n=== Матрица 2 ===");
+                            break;
+                        case "2":
+                            var sum = matrix1 + matrix2;
+                            sum.Print("\n=== Сумма матриц ===");
+                            break;
+                        case "3":
+                            var product = matrix1 * matrix2;
+                            product.Print("\n=== Произведение матриц ===");
+                            break;
+                        case "4":
+                            Console.WriteLine($"\nmatrix1 > matrix2: {matrix1 > matrix2}");
+                            Console.WriteLine($"matrix1 < matrix2: {matrix1 < matrix2}");
+                            Console.WriteLine($"matrix1 == matrix2: {matrix1 == matrix2}");
+                            Console.WriteLine($"matrix1 != matrix2: {matrix1 != matrix2}");
+                            break;
+                        case "5":
+                            Console.WriteLine($"\nОпределитель матрицы 1: {matrix1.Determinant():F2}");
+                            Console.WriteLine($"Определитель матрицы 2: {matrix2.Determinant():F2}");
+                            break;
+                        case "6":
+                            var inv1 = matrix1.Inverse();
+                            inv1.Print("\n=== Обратная матрица 1 ===");
+
+                            var inv2 = matrix2.Inverse();
+                            inv2.Print("\n=== Обратная матрица 2 ===");
+                            break;
+                        case "7":
+                            var clone1 = matrix1.Clone();
+                            var clone2 = matrix2.Clone();
+                            clone1.Print("\n=== Клон матрицы 1 ===");
+                            clone2.Print("\n=== Клон матрицы 2 ===");
+                            Console.WriteLine("Матрицы успешно клонированы!");
+                            break;
+                        case "0":
+                            return;
+                        default:
+                            Console.WriteLine("Неверный ввод!");
+                            break;
+                    }
                 }
+                catch (MatrixSizeMismatchException ex)
+                {
+                    Console.WriteLine($"Ошибка размеров: {ex.Message}");
+                }
+                catch (SingularMatrixException ex)
+                {
+                    Console.WriteLine($"Ошибка операции: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Непредвиденная ошибка: {ex.Message}");
+                }
+
+                Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+                Console.ReadKey();
             }
         }
     }
